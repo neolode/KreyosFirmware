@@ -93,7 +93,7 @@ const char* toEnglishPeriod(uint32_t seconds, char* buffer)
 // shortorlong short = 0, long = 1
 const char* toMonthName(uint8_t month, int shortorlong)
 {
-  if (month >= 12 || month == 0)
+  if (month > 12 || month == 0)
     month = 1;
   if (shortorlong)
     return month_name[month - 1];
